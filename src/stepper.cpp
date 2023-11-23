@@ -58,29 +58,6 @@ void Stepper::step(double angular_velocity) {
     }
 }
 
-void Stepper::stepTest(double angular_velocity) {
-    // Angular velocity takes rad/s
-
-    long step_delay_us = abs(1 / (SPR * angular_velocity / (2 * PI) / 1000000));
-    
-    // set direction
-    int dir;
-    if (angular_velocity > 0) {
-        dir = CCW;
-    } else if (angular_velocity < 0) {
-        dir = CW;
-    } else {
-        return;
-    }
-    gpio_put(this->pin_d, dir);
-
-    // step
-    gpio_put(this->pin_s, 1);
-    sleep_us(step_delay_us);
-    gpio_put(this->pin_s, 0);
-    sleep_us(step_delay_us);
-}
-
 void Stepper::halt() {
     // set en pin to high in order to disable
     gpio_put(this->pin_e, HIGH);

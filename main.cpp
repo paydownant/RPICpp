@@ -12,7 +12,6 @@ int main(int argc, char *argv[]) {
 
     while(1) {
         stepper1.step(3.1415 * 2);
-        // stepper1.stepTest(3.14 * 2);
     }
     
     return 0;
