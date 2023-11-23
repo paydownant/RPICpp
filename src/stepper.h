@@ -25,10 +25,11 @@ class Stepper {
     const int SPR = 200;
 
     // microstepping
-    // ms1 high
-    // ms2 low
-    // is micro stepping mode of 2 for tmc2208/2209 drivers
-    const int MICRO_STEPS = 2;
+    // ms1 low
+    // ms2 high
+    // ms3 low
+    // is micro stepping mode of 4 for tmc2208/2209 drivers
+    const int MICRO_STEPS = 4;
 
     int micro_steps;
 
