@@ -20,8 +20,14 @@ class Stepper {
 
     const double PI = 3.14159265359;
 
-    // Steps per revolution and micro stepping
+    // steps per revolution
+    // on nema17 motors this will be 200
     const int SPR = 200;
+
+    // microstepping
+    // ms1 high
+    // ms2 low
+    // is micro stepping mode of 2 for tmc2208/2209 drivers
     const int MICRO_STEPS = 2;
 
     int micro_steps;
