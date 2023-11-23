@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
 
 #include "pico.h"
-#include "hardware/time.h"
+#include "hardware/timer.h"
 #include "pico/stdlib.h"
 
 #include "stepper.h"
@@ -28,7 +27,7 @@ Stepper::Stepper(int pin_s, int pin_d, int pin_e) {
 
 void Stepper::step(double angular_velocity) {
     // Angular velocity takes rad/s
-    long step_delay = abs(1 / (SPR * 2 * angular_velocity * 1000 / (2 * PI)));
+    long usps = abs(1.0 / (2.0 * SPR * angular_velocity / (2.0 * PI) / 100000.0));
     
     // set direction
     int dir;
@@ -42,8 +41,8 @@ void Stepper::step(double angular_velocity) {
     gpio_put(this->pin_d, dir);
 
     // step
-    uint64_t curr_msec = time_us_64();
-    if (curr_msec - this->time_step >= step_delay) {
+    uint64_t curr_usec = time_us_64();
+    if (curr_usec - this->time_step >= usps) {
         int step;
         if (this->prev_step_state == LOW) {
             step = HIGH;
@@ -55,9 +54,31 @@ void Stepper::step(double angular_velocity) {
         }
         gpio_put(this->pin_s, step);
         this->prev_step_state = step;
-        this->time_step = curr_msec;
+        this->time_step = curr_usec;
     }
+}
+
+void Stepper::stepTest(double angular_velocity) {
+    // Angular velocity takes rad/s
+
+    long step_delay_us = abs(1 / (SPR * angular_velocity / (2 * PI) / 1000000));
     
+    // set direction
+    int dir;
+    if (angular_velocity > 0) {
+        dir = CCW;
+    } else if (angular_velocity < 0) {
+        dir = CW;
+    } else {
+        return;
+    }
+    gpio_put(this->pin_d, dir);
+
+    // step
+    gpio_put(this->pin_s, 1);
+    sleep_us(step_delay_us);
+    gpio_put(this->pin_s, 0);
+    sleep_us(step_delay_us);
 }
 
 void Stepper::halt() {

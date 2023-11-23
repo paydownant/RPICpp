@@ -8,17 +8,18 @@ class Stepper {
 
     // Methods
     void step(double angular_velocity);
+    void stepTest(double angular_velocity);
     void halt(); 
 
     private:
     // Variables
-    const int CW = 1;
-    const int CCW = 0;
+    const int CW = 0;
+    const int CCW = 1;
 
     const int HIGH = 1;
     const int LOW = 0;
 
-    const int SPR = 400;
+    const int SPR = 200;
     const double PI = 3.14159265359;
 
     int pin_s;

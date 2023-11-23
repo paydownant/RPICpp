@@ -5,7 +5,7 @@
 #include "rpp.h"
 
 using std::string;
-RPP::RPP(string port, string path, int baudrate=115200) {
+RPP::RPP(string port, string path, int baudrate) {
     this->port = port;
     this->path = path;
     this->baudrate = baudrate;
