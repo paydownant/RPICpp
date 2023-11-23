@@ -1,18 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "pico.h"
-#include "hardware/timer.h"
 #include "pico/stdlib.h"
 
 #include "stepper.h"
 
-Stepper::Stepper(int pin_s, int pin_d, int pin_e) {
+Stepper::Stepper(int pin_s, int pin_d, int pin_e, double us_adjustment) {
     this->pin_s = pin_s;
     this->pin_d = pin_d;
     this->pin_e = pin_e;
     this->prev_step_state = LOW;
-    this->time_step = 0;
+    this->inst_usec = 0;
+    this->us_adjustment = us_adjustment;
 
     gpio_init(this->pin_s);
     gpio_init(this->pin_d);
@@ -27,7 +26,7 @@ Stepper::Stepper(int pin_s, int pin_d, int pin_e) {
 
 void Stepper::step(double angular_velocity) {
     // Angular velocity takes rad/s
-    long usps = abs(1.0 / (2.0 * SPR * angular_velocity / (2.0 * PI) / 100000.0));
+    long us_halfstep = (long)abs(us_adjustment * 1.0 / (2 * SPR * angular_velocity / (2.0 * PI) / 1000000.0));
     
     // set direction
     int dir;
@@ -42,19 +41,10 @@ void Stepper::step(double angular_velocity) {
 
     // step
     uint64_t curr_usec = time_us_64();
-    if (curr_usec - this->time_step >= usps) {
-        int step;
-        if (this->prev_step_state == LOW) {
-            step = HIGH;
-        } else if (this->prev_step_state == HIGH) {
-            step = LOW;
-        } else {
-            printf("error: no prev step state \n");
-            return;
-        }
-        gpio_put(this->pin_s, step);
-        this->prev_step_state = step;
-        this->time_step = curr_usec;
+    if (curr_usec - this->inst_usec >= us_halfstep) {
+        gpio_put(this->pin_s, !this->prev_step_state);
+        this->prev_step_state = !this->prev_step_state;
+        this->inst_usec = curr_usec;
     }
 }
 

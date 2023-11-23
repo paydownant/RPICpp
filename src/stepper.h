@@ -4,7 +4,7 @@
 class Stepper {
     public:
     // Constructor
-    Stepper(int pin_s, int pin_d, int pin_e);
+    Stepper(int pin_s, int pin_d, int pin_e, double us_adjustment = 0.125);
 
     // Methods
     void step(double angular_velocity);
@@ -22,12 +22,14 @@ class Stepper {
     const int SPR = 200;
     const double PI = 3.14159265359;
 
+    double us_adjustment;
+
     int pin_s;
     int pin_d;
     int pin_e;
 
     int prev_step_state;
-    uint64_t time_step;
+    uint64_t inst_usec;
 
 };
 
