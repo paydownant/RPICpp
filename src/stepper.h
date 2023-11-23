@@ -22,7 +22,7 @@ class Stepper {
 
     // Steps per revolution and micro stepping
     const int SPR = 200;
-    const int MICRO_STEPS = 8;
+    const int MICRO_STEPS = 2;
 
     int micro_steps;
 

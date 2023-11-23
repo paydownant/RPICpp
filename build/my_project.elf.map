@@ -1440,9 +1440,9 @@ Discarded input sections
  .comment       0x00000000       0x27 CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .text          0x00000000        0x0 /tmp/ccVTRn7M.o
- .data          0x00000000        0x0 /tmp/ccVTRn7M.o
- .bss           0x00000000        0x0 /tmp/ccVTRn7M.o
+ .text          0x00000000        0x0 /tmp/ccqJWHlr.o
+ .data          0x00000000        0x0 /tmp/ccqJWHlr.o
+ .bss           0x00000000        0x0 /tmp/ccqJWHlr.o
  .text          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(globals_io.o)
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(globals_io.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(globals_io.o)
@@ -19491,7 +19491,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nof
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccVTRn7M.o
+ .boot2         0x10000000      0x100 /tmp/ccqJWHlr.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -29471,7 +29471,7 @@ LOAD CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/p
 LOAD CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj
 LOAD CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-LOAD /tmp/ccVTRn7M.o
+LOAD /tmp/ccqJWHlr.o
 LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -29567,7 +29567,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000005ea       0x2c CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .ARM.attributes
-                0x00000616       0x22 /tmp/ccVTRn7M.o
+                0x00000616       0x22 /tmp/ccqJWHlr.o
  .ARM.attributes
                 0x00000638       0x2c /usr/lib/gcc/arm-none-eabi/12.2.1/../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a(globals_io.o)
  .ARM.attributes
