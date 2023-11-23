@@ -5,13 +5,12 @@
 
 #include "stepper.h"
 
-Stepper::Stepper(int pin_s, int pin_d, int pin_e, double us_adjustment) {
+Stepper::Stepper(int pin_s, int pin_d, int pin_e) {
     this->pin_s = pin_s;
     this->pin_d = pin_d;
     this->pin_e = pin_e;
     this->prev_step_state = LOW;
     this->inst_usec = 0;
-    this->us_adjustment = us_adjustment;
 
     gpio_init(this->pin_s);
     gpio_init(this->pin_d);
@@ -26,7 +25,7 @@ Stepper::Stepper(int pin_s, int pin_d, int pin_e, double us_adjustment) {
 
 void Stepper::step(double angular_velocity) {
     // Angular velocity takes rad/s
-    long us_halfstep = (long)abs(us_adjustment * 1.0 / (2 * SPR * angular_velocity / (2.0 * PI) / 1000000.0));
+    long us_halfstep = (long)abs(1000000.0 / (2 * SPR * MICRO_STEPS * angular_velocity / (2.0 * PI)));
     
     // set direction
     int dir;

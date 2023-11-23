@@ -4,11 +4,10 @@
 class Stepper {
     public:
     // Constructor
-    Stepper(int pin_s, int pin_d, int pin_e, double us_adjustment = 0.125);
+    Stepper(int pin_s, int pin_d, int pin_e);
 
     // Methods
     void step(double angular_velocity);
-    void stepTest(double angular_velocity);
     void halt(); 
 
     private:
@@ -19,10 +18,13 @@ class Stepper {
     const int HIGH = 1;
     const int LOW = 0;
 
-    const int SPR = 200;
     const double PI = 3.14159265359;
 
-    double us_adjustment;
+    // Steps per revolution and micro stepping
+    const int SPR = 200;
+    const int MICRO_STEPS = 8;
+
+    int micro_steps;
 
     int pin_s;
     int pin_d;
