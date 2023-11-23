@@ -1,12 +1,12 @@
 
 #include <iostream>
 
-#include "rpp.h"
-#include "stepper.h"
+#include "src/rpp.h"
+#include "src/stepper.h"
 
 int main(int argc, char *argv[]) {
     RPP board("/dev/ttyACM0","controller/main.py");
-    board.printData();
+    // board.printData();
     
     Stepper stepper1(12, 13, 14);
 

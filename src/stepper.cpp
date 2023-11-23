@@ -5,7 +5,6 @@
 #include "pico.h"
 #include "hardware/time.h"
 #include "pico/stdlib.h"
-#include "pico/binary_info.h"
 
 #include "stepper.h"
 
