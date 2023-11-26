@@ -20,7 +20,6 @@ Stepper::Stepper(int pin_s, int pin_d, int pin_e) {
     gpio_set_dir(this->pin_d, GPIO_OUT);
     gpio_set_dir(this->pin_e, GPIO_OUT);
 
-    sleep_ms(50);
 }
 
 void Stepper::step(double angular_velocity) {
