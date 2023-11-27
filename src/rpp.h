@@ -5,22 +5,14 @@ using std::string;
 class RPP {
     public:
         // Constructor
-        RPP(string port, string path, int baudrate=115200);
-
-        // Variables
+        RPP(int hub);
 
         // Methods
         void writeData(string out);
-        string readData();
-        void printData();
+        bool readData(char *buffer);
         
     private:
-        // Variables
-        string port;
-        string path;
-        int baudrate;
 
-        // Methods
     
 };
 

@@ -49,8 +49,4 @@ CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_s
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
- /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
- /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/hardware_uart/include/hardware/uart.h \
- /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
- /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
- /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h
+ /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h

@@ -14,8 +14,6 @@ pico_sdk_init()
 # rest of your project
 add_executable(${PROJECT_NAME}
     main.cpp
-    src/rpp.cpp
-    src/rpp.h
     src/stepper.cpp
     src/stepper.h
 )
@@ -24,6 +22,10 @@ add_executable(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
     pico_stdlib
 )
+
+# usb serial
+pico_enable_stdio_usb(${PROJECT_NAME} 1)
+pico_enable_stdio_uart(${PROJECT_NAME} 0)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})

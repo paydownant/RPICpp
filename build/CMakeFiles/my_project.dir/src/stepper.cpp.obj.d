@@ -63,5 +63,5 @@ CMakeFiles/my_project.dir/src/stepper.cpp.obj: \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/uart.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/uart.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/dreq.h \
- /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_uart/include/pico/stdio_uart.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
  /home/timanishi/Documents/C++/RPICpp/src/stepper.h

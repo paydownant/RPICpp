@@ -1,32 +1,31 @@
 
 #include <string>
 #include <iostream>
+#include <stdio.h>
 
+#include "pico/stdlib.h"
 #include "rpp.h"
 
-using std::string;
-RPP::RPP(string port, string path, int baudrate) {
-    this->port = port;
-    this->path = path;
-    this->baudrate = baudrate;
+
+RPP::RPP(int hub) {
+    stdio_init_all();
 }
 
 
 void RPP::writeData(string out) {
     // Write data to stdout
     std::cout<<out<<std::endl;
-    
+    printf("%s", &out);
+    sleep_ms(100);
 }
 
-string RPP::readData() {
+bool RPP::readData(char *buffer) {
     // Read data from stdin
     string data = "Test Data";
 
-    return data;
-}
+    if (fgets(buffer, 100, stdin) != NULL) {
+        return true;
+    }
 
-void RPP::printData() {
-    std::cout<<"Port: "<<this->port<<std::endl;
-    std::cout<<"Path: "<<this->path<<std::endl;
-    std::cout<<"Baud rate: "<<this->baudrate<<std::endl;
+    return false;
 }
