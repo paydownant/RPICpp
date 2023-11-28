@@ -1687,6 +1687,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_project.dir/build.make CMakeFiles/my_project.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/rpp.obj: src/rpp.cpp.obj
+.PHONY : src/rpp.obj
+
+# target to build an object file
+src/rpp.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_project.dir/build.make CMakeFiles/my_project.dir/src/rpp.cpp.obj
+.PHONY : src/rpp.cpp.obj
+
+src/rpp.i: src/rpp.cpp.i
+.PHONY : src/rpp.i
+
+# target to preprocess a source file
+src/rpp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_project.dir/build.make CMakeFiles/my_project.dir/src/rpp.cpp.i
+.PHONY : src/rpp.cpp.i
+
+src/rpp.s: src/rpp.cpp.s
+.PHONY : src/rpp.s
+
+# target to generate assembly for a file
+src/rpp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_project.dir/build.make CMakeFiles/my_project.dir/src/rpp.cpp.s
+.PHONY : src/rpp.cpp.s
+
 src/stepper.obj: src/stepper.cpp.obj
 .PHONY : src/stepper.obj
 
@@ -1911,6 +1935,9 @@ help:
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... src/rpp.obj"
+	@echo "... src/rpp.i"
+	@echo "... src/rpp.s"
 	@echo "... src/stepper.obj"
 	@echo "... src/stepper.i"
 	@echo "... src/stepper.s"

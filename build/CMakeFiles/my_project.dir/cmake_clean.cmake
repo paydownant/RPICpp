@@ -126,6 +126,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/my_project.dir/home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
   "CMakeFiles/my_project.dir/main.cpp.obj"
   "CMakeFiles/my_project.dir/main.cpp.obj.d"
+  "CMakeFiles/my_project.dir/src/rpp.cpp.obj"
+  "CMakeFiles/my_project.dir/src/rpp.cpp.obj.d"
   "CMakeFiles/my_project.dir/src/stepper.cpp.obj"
   "CMakeFiles/my_project.dir/src/stepper.cpp.obj.d"
   "my_project.elf"

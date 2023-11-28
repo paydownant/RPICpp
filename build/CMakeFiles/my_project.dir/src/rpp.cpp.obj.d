@@ -1,13 +1,14 @@
 CMakeFiles/my_project.dir/src/rpp.cpp.obj: \
  /home/timanishi/Documents/C++/RPICpp/src/rpp.cpp \
- /usr/include/newlib/c++/12.2.1/string \
+ /usr/include/newlib/c++/12.2.1/iostream \
  /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
  /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
  /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
  /usr/include/newlib/c++/12.2.1/pstl/pstl_config.h \
+ /usr/include/newlib/c++/12.2.1/ostream \
+ /usr/include/newlib/c++/12.2.1/ios /usr/include/newlib/c++/12.2.1/iosfwd \
  /usr/include/newlib/c++/12.2.1/bits/stringfwd.h \
  /usr/include/newlib/c++/12.2.1/bits/memoryfwd.h \
- /usr/include/newlib/c++/12.2.1/bits/char_traits.h \
  /usr/include/newlib/c++/12.2.1/bits/postypes.h \
  /usr/include/newlib/c++/12.2.1/cwchar /usr/include/newlib/wchar.h \
  /usr/include/newlib/_ansi.h /usr/include/newlib/newlib.h \
@@ -20,23 +21,37 @@ CMakeFiles/my_project.dir/src/rpp.cpp.obj: \
  /usr/include/newlib/sys/lock.h /usr/include/newlib/sys/cdefs.h \
  /usr/lib/gcc/arm-none-eabi/12.2.1/include/stdarg.h \
  /usr/include/newlib/sys/_locale.h \
+ /usr/include/newlib/c++/12.2.1/exception \
+ /usr/include/newlib/c++/12.2.1/bits/exception.h \
+ /usr/include/newlib/c++/12.2.1/bits/exception_ptr.h \
+ /usr/include/newlib/c++/12.2.1/bits/exception_defines.h \
+ /usr/include/newlib/c++/12.2.1/bits/cxxabi_init_exception.h \
+ /usr/include/newlib/c++/12.2.1/typeinfo \
+ /usr/include/newlib/c++/12.2.1/bits/hash_bytes.h \
+ /usr/include/newlib/c++/12.2.1/new \
+ /usr/include/newlib/c++/12.2.1/bits/move.h \
  /usr/include/newlib/c++/12.2.1/type_traits \
+ /usr/include/newlib/c++/12.2.1/bits/nested_exception.h \
+ /usr/include/newlib/c++/12.2.1/bits/char_traits.h \
  /usr/include/newlib/c++/12.2.1/cstdint \
  /usr/lib/gcc/arm-none-eabi/12.2.1/include/stdint.h \
- /usr/include/newlib/c++/12.2.1/bits/allocator.h \
- /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++allocator.h \
- /usr/include/newlib/c++/12.2.1/bits/new_allocator.h \
- /usr/include/newlib/c++/12.2.1/new \
- /usr/include/newlib/c++/12.2.1/bits/exception.h \
- /usr/include/newlib/c++/12.2.1/bits/functexcept.h \
- /usr/include/newlib/c++/12.2.1/bits/exception_defines.h \
- /usr/include/newlib/c++/12.2.1/bits/move.h \
- /usr/include/newlib/c++/12.2.1/bits/cpp_type_traits.h \
  /usr/include/newlib/c++/12.2.1/bits/localefwd.h \
  /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++locale.h \
  /usr/include/newlib/c++/12.2.1/clocale /usr/include/newlib/locale.h \
- /usr/include/newlib/_ansi.h /usr/include/newlib/c++/12.2.1/iosfwd \
- /usr/include/newlib/c++/12.2.1/cctype /usr/include/newlib/ctype.h \
+ /usr/include/newlib/_ansi.h /usr/include/newlib/c++/12.2.1/cctype \
+ /usr/include/newlib/ctype.h \
+ /usr/include/newlib/c++/12.2.1/bits/ios_base.h \
+ /usr/include/newlib/c++/12.2.1/ext/atomicity.h \
+ /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/gthr.h \
+ /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/gthr-default.h \
+ /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/atomic_word.h \
+ /usr/include/newlib/c++/12.2.1/bits/locale_classes.h \
+ /usr/include/newlib/c++/12.2.1/string \
+ /usr/include/newlib/c++/12.2.1/bits/allocator.h \
+ /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++allocator.h \
+ /usr/include/newlib/c++/12.2.1/bits/new_allocator.h \
+ /usr/include/newlib/c++/12.2.1/bits/functexcept.h \
+ /usr/include/newlib/c++/12.2.1/bits/cpp_type_traits.h \
  /usr/include/newlib/c++/12.2.1/bits/ostream_insert.h \
  /usr/include/newlib/c++/12.2.1/bits/cxxabi_forced.h \
  /usr/include/newlib/c++/12.2.1/bits/stl_iterator_base_types.h \
@@ -64,7 +79,6 @@ CMakeFiles/my_project.dir/src/rpp.cpp.obj: \
  /usr/include/newlib/c++/12.2.1/bits/stl_construct.h \
  /usr/include/newlib/c++/12.2.1/string_view \
  /usr/include/newlib/c++/12.2.1/bits/functional_hash.h \
- /usr/include/newlib/c++/12.2.1/bits/hash_bytes.h \
  /usr/include/newlib/c++/12.2.1/bits/string_view.tcc \
  /usr/include/newlib/c++/12.2.1/ext/string_conversions.h \
  /usr/include/newlib/c++/12.2.1/cstdlib \
@@ -83,20 +97,6 @@ CMakeFiles/my_project.dir/src/rpp.cpp.obj: \
  /usr/include/newlib/sys/errno.h \
  /usr/include/newlib/c++/12.2.1/bits/charconv.h \
  /usr/include/newlib/c++/12.2.1/bits/basic_string.tcc \
- /usr/include/newlib/c++/12.2.1/iostream \
- /usr/include/newlib/c++/12.2.1/ostream \
- /usr/include/newlib/c++/12.2.1/ios \
- /usr/include/newlib/c++/12.2.1/exception \
- /usr/include/newlib/c++/12.2.1/bits/exception_ptr.h \
- /usr/include/newlib/c++/12.2.1/bits/cxxabi_init_exception.h \
- /usr/include/newlib/c++/12.2.1/typeinfo \
- /usr/include/newlib/c++/12.2.1/bits/nested_exception.h \
- /usr/include/newlib/c++/12.2.1/bits/ios_base.h \
- /usr/include/newlib/c++/12.2.1/ext/atomicity.h \
- /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/gthr.h \
- /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/gthr-default.h \
- /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/atomic_word.h \
- /usr/include/newlib/c++/12.2.1/bits/locale_classes.h \
  /usr/include/newlib/c++/12.2.1/bits/locale_classes.tcc \
  /usr/include/newlib/c++/12.2.1/system_error \
  /usr/include/newlib/c++/12.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/error_constants.h \
@@ -114,11 +114,19 @@ CMakeFiles/my_project.dir/src/rpp.cpp.obj: \
  /usr/include/newlib/c++/12.2.1/bits/ostream.tcc \
  /usr/include/newlib/c++/12.2.1/istream \
  /usr/include/newlib/c++/12.2.1/bits/istream.tcc \
- /home/timanishi/pico_sdk/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/tusb.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /usr/lib/gcc/arm-none-eabi/12.2.1/include/stdbool.h \
+ /usr/include/newlib/string.h /usr/include/newlib/strings.h \
+ /usr/include/newlib/sys/string.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/tusb_option.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/include/tusb_config.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_base/include/pico.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_base/include/pico/types.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_base/include/pico/assert.h \
- /usr/lib/gcc/arm-none-eabi/12.2.1/include/stdbool.h \
  /usr/include/newlib/c++/12.2.1/cassert /usr/include/newlib/assert.h \
  /home/timanishi/Documents/C++/RPICpp/build/generated/pico_base/pico/version.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_base/include/pico/config.h \
@@ -131,12 +139,33 @@ CMakeFiles/my_project.dir/src/rpp.cpp.obj: \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/sio.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_base/include/pico/types.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_base/include/pico/error.h \
- /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_mcu.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_compiler.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_verify.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_types.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_debug.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_timeout.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_common.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/osal/osal_pico.h \
  /home/timanishi/pico_sdk/pico-sdk/src/common/pico_time/include/pico/time.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/hardware_timer/include/hardware/timer.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/timer.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/hardware_base/include/hardware/address_mapped.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/timer.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/sem.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/lock_core.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/mutex.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/common/pico_sync/include/pico/critical_section.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/osal/osal.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/common/tusb_fifo.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/class/hid/hid.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/device/usbd.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc_device.h \
+ /home/timanishi/pico_sdk/pico-sdk/lib/tinyusb/src/class/cdc/cdc.h \
+ /home/timanishi/pico_sdk/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2_common/hardware_gpio/include/hardware/gpio.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/sio.h \
  /home/timanishi/pico_sdk/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/interp.h \

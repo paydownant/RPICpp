@@ -16,6 +16,8 @@ add_executable(${PROJECT_NAME}
     main.cpp
     src/stepper.cpp
     src/stepper.h
+    src/rpp.cpp
+    src/rpp.h
 )
 
 # Add pico_stdlib library which aggregates commonly used features
