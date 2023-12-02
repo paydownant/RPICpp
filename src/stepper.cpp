@@ -5,10 +5,12 @@
 
 #include "stepper.h"
 
-Stepper::Stepper(int pin_s, int pin_d, int pin_e) {
+Stepper::Stepper(int pin_s, int pin_d, int pin_e, double orientation) {
     this->pin_s = pin_s;
     this->pin_d = pin_d;
     this->pin_e = pin_e;
+    this->orientation = orientation;
+
     this->prev_step_state = LOW;
     this->inst_usec = 0;
 
@@ -49,4 +51,8 @@ void Stepper::step(double angular_velocity) {
 void Stepper::halt() {
     // set en pin to high in order to disable
     gpio_put(this->pin_e, HIGH);
+}
+
+double Stepper::getOr() {
+    return this->orientation;
 }

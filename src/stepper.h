@@ -4,11 +4,12 @@
 class Stepper {
     public:
     // Constructor
-    Stepper(int pin_s, int pin_d, int pin_e);
+    Stepper(int pin_s=0, int pin_d=0, int pin_e=0, double orientation=0.0);
 
     // Methods
     void step(double angular_velocity);
-    void halt(); 
+    void halt();
+    double getOr();
 
     private:
     // Variables
@@ -31,7 +32,7 @@ class Stepper {
     // is micro stepping mode of 4 for tmc2208/2209 drivers
     const int MICRO_STEPS = 4;
 
-    int micro_steps;
+    double orientation;
 
     int pin_s;
     int pin_d;
