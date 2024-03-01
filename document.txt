@@ -1,0 +1,4 @@
+Program to control stepper motors with rpi based boards
+
+build to build dir by:
+    cmake build
