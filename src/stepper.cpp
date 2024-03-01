@@ -35,6 +35,8 @@ void Stepper::step(double angular_velocity) {
     } else if (angular_velocity < 0) {
         dir = CW;
     } else {
+        printf("dir out of range");
+        halt();
         return;
     }
     gpio_put(this->pin_d, dir);

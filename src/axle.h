@@ -13,15 +13,15 @@ class Axle {
 
     private:
 
+        // Pre-calculated trigonometry values
         const double S1VAR1 = 0.5;
         const double S1VAR2 = 0.86602540378;
-
         const double S2VAR1 = 0.5;
         const double S2VAR2 = -0.86602540378;
-        
         const double S3VAR1 = -1.0;
         const double S3VAR2 = 0.0;
         
+        // Pre-configured dimensions (mm)
         const double WHEEL_RADIUS = 25.0;
         const double PLATFORM_RADIUS = 78.8010753607;
 

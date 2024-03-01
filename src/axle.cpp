@@ -3,6 +3,9 @@
 #include "stepper.h"
 
 Axle::Axle() {
+    /*
+        Initiate stepper motors with three gpio pin numbers in order of s, d, e
+    */
     this->s1 = new Stepper(12,13,14);
     this->s2= new Stepper(15,16,17);
     this->s3 = new Stepper(18,19,20);
